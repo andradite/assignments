@@ -1,6 +1,6 @@
 class Main
     def self.run(*args)
-        $stdout.puts( "Hello, World!" );
+        $stdout.putc( "Hello, Rickey!" );
     end
     
     run();

@@ -1,42 +1,51 @@
+load 'assignments/DEPENDS'
+
 class Test
     def initialize(*args)
         $tests = Array.new;
         $results = 0;
-        File.open( "assignments/test/TESTS", "r" ) do |file|
+        File.open( $TEST+"TESTS", "r" ) do |file|
             file.each_line do |line|
                 $tests << line.chomp;
             end
             $tests << "all" << "exit";
         end
         system( 'clear' );
-        run();
-    end
-    
-    def run()
         puts( "Available Tests: #{$tests}" );
         print( "Which test would you like to run? " );
+        run(gets.chomp);
+    end
+    
+    def run(test)
+        all if test == 'all';  exit if test == 'exit';
         $stdout = $stdtest = StringIO.new;
-        send( :"#{gets.chomp}" );
+        load $HELP+test+'.rb'
+        $stdout = StringIO.new;
+        load $SRC+'main.rb'
+        send( :"#{test}" );
     end
     
     def all()
         $tests -= ['all', 'exit'];
         $tests.each do |test|
-            send( :"#{test}" );
+            run(test);
         end
     end
     
+
+    
     def solution()
-        load 'assignments/help/solution.rb'
-        $stdout = StringIO.new;
-        load 'assignments/src/main.rb'
-        ( $results += 1 ) unless $stdout.string == $stdtest.string;
+        ( $results = 413 ) unless $stdout.string == $stdtest.string;
+        exit unless $results == 0;
     end
     
     def challenge_1()
-        load 'assignments/help/solution.rb'
-        load 'assignments/src/main.rb'
-        ( $results += 1 );
+        ( $results = 22 ) unless $stdout.string;
+        exit unless $results == 0;
+    end
+    
+    def challenge_2()
+        ( $results = 141 );
     end
     
     at_exit do

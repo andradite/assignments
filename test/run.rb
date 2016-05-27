@@ -1,9 +1,18 @@
 class Test
-    def self.run(*args)
-        $test_results = 0;
+    def initialize(*args)
+        $stdout = StringIO.new;
+        run();
+    end
+    
+    def run()
+        $stdout.puts "Hello, World!"
+        $test_results = $stdout.string;
     end
     
     at_exit do
+        $stdout = STDOUT;
         puts $test_results
     end
+    
+    new();
 end

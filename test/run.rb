@@ -43,15 +43,7 @@ class Test
     end
     
     def challenge_1()
-        ( $results[:challenge_1] = "Say Hello!" ) unless $stdout.string.include?( "Hello" );
-        ( $results[:challenge_1] = "Use Your Name, Not 'World'!" ) if $stdout.string.include?( "World" );
-        ( $results[:challenge_1] = 'Wrong Length!' ) unless $stdout.string.length > "Hello, X!".length;
         exit unless $results[:challenge_1] == 'Passed!';
-    end
-    
-    def challenge_2()
-        ( $results[:challenge_2] = 'Wrong Length!' ) unless $stdout.string.length == $stdtest.string.length;
-        exit unless $results[:challenge_2] == 'Passed!';
     end
     
     at_exit do

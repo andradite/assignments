@@ -1,6 +1,5 @@
-#Hello, World! [![Join the chat at https://gitter.im/andradite/assignments](https://badges.gitter.im/andradite/assignments.svg)](https://gitter.im/andradite/assignments?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+#Welcome to Camp Andradite! [![Join the chat at https://gitter.im/andradite/assignments](https://badges.gitter.im/andradite/assignments.svg)](https://gitter.im/andradite/assignments?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-###Welcome to Camp Andradite!
 This program is designed to help people of all backgrounds and levels of experience
 to become become expert level programmers and field specialists. This is the beginning
 of the program where we setup our systems, learn a bit about terminals, and write

@@ -1,5 +1,5 @@
 file = __FILE__
-file.slice! 'DEPENDS'
+file.slice! 'DEPEND'
 $HOME = file
 $BUILD = file + 'build/'
 $DATA = file + 'data/'

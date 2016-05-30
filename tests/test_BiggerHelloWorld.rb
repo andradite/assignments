@@ -1,7 +1,7 @@
 require "NAME.rb"
 require "test/unit"
 
-class TestNAME < Test::Unit::TestCase
+class TestBiggerHelloWorld < Test::Unit::TestCase
 
     def setup
         $stdout = StringIO.new

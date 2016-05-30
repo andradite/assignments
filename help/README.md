@@ -2,8 +2,4 @@
 - [ ] 
 
 ###Bonus Challenges
-<<<<<<< HEAD
 - [ ] 
-=======
-- [ ] 
->>>>>>> origin/master

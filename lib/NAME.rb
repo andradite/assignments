@@ -1,6 +1,9 @@
-#load 'assignments/DEPENDS'
+#load 'DEPEND'
 
-class Main
-    def self.run(*args)
+class NAME
+    def run(*args)
+        // your code goes here
     end
 end
+
+program = NAME.new

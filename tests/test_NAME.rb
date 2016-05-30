@@ -28,7 +28,7 @@ class TestNAME < Test::Unit::TestCase
             $stdout = stio; @test_class.run
             @test_output = $stdout.string.chomp
         end
-        @message << "Your output is incorrect!\n"
+        @message << "\nYour output is incorrect!\n"
         assert_equal(@help_output, @test_output, @message)
     end
 

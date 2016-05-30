@@ -2,7 +2,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name          = "NAME"
+  spec.name          = "Hello World"
   spec.version       = '1.0'
   spec.authors       = ["Your Name Here"]
   spec.email         = ["youremail@yourdomain.com"]
@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = "http://domainforproject.com/"
   spec.license       = "GNU GENERAL PUBLIC LICENSE"
 
-  spec.files         = ['lib/NAME.rb']
-  spec.executables   = ['bin/NAME']
-  spec.test_files    = ['tests/test_NAME.rb']
+  spec.files         = ['lib/HelloWorld.rb']
+  spec.executables   = ['bin/HelloWorld']
+  spec.test_files    = ['tests/test_HelloWorld.rb']
   spec.require_paths = ["lib"]
 end

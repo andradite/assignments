@@ -1,9 +1,11 @@
-class NAME
+#load 'DEPEND'
+
+class HelpNAME
     def run(*args) end
 end
 
-class Main
+class HelpNAME
     def challenge_1(*args) end
 end
 
-program = NAME.new
+program = HelpNAME.new

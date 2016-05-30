@@ -1,6 +1,6 @@
-require "./help/help_NAME.rb"
-require "NAME.rb"
 require "test/unit"
+require "NAME.rb"
+require "help_NAME.rb"
 
 class TestNAME < Test::Unit::TestCase
 
@@ -9,12 +9,14 @@ class TestNAME < Test::Unit::TestCase
         @test_input, @test_output, @test_error = args
         @help_input, @help_output, @help_error = args
         
+        @message = String.new
         @test_class = NAME.new
         @help_class = HelpNAME.new
     end
     
     def teardown
-        $stdin, $stdout, $stderr = STDIN, STDOUT, STDERR
+        *args = STDIN, STDOUT, STDERR
+        $stdin, $stdout, $stderr = args
     end
     
     def test_solution
@@ -26,7 +28,8 @@ class TestNAME < Test::Unit::TestCase
             $stdout = stio; @test_class.run
             @test_output = $stdout.string.chomp
         end
-        assert_equal(@help_output, @test_output, "Your output is incorrect!")
+        @message << "Your output is incorrect!"
+        assert_equal(@help_output, @test_output, @message)
     end
 
 end

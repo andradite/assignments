@@ -1,7 +1,8 @@
 #TODO List
 - [ ] Output "HELLO" in big letters.
-- [ ] Use 5 lines.
-- [ ] Use tab to add space between letters.
+- [ ] Use 5 lines and 6 columns for each letter.
+- [ ] The widest part of your O should have 4 Os.
 
 ###Bonus Challenges
+- [ ] Output "HELLO, WORLD" in big letters.
 - [ ] Output your favorite type of food in big letters.

@@ -1,21 +1,22 @@
-require "./help/help_BiggerHelloWorld.rb"
-require "BiggerHelloWorld.rb"
 require "test/unit"
+require "BiggerHelloWorld.rb"
+require "help_BiggerHelloWorld.rb"
 
 class TestBiggerHelloWorld < Test::Unit::TestCase
 
     def setup        
-        $stdclear = StringIO.new
         *args = String.new, String.new, String.new
         @test_input, @test_output, @test_error = args
         @help_input, @help_output, @help_error = args
         
+        @message = String.new
         @test_class = BiggerHelloWorld.new
         @help_class = HelpBiggerHelloWorld.new
     end
     
     def teardown
-        $stdin, $stdout, $stderr = STDIN, STDOUT, STDERR
+        *args = STDIN, STDOUT, STDERR
+        $stdin, $stdout, $stderr = args
     end
     
     def test_solution
@@ -27,7 +28,9 @@ class TestBiggerHelloWorld < Test::Unit::TestCase
             $stdout = stio; @test_class.run
             @test_output = $stdout.string.chomp
         end
-        assert_equal(@help_output, @test_output)
+        @message << "\nYou should be saying:\n#{@help_output}\n"
+        @message << "\nnot saying:\n#{@test_output}\n"
+        assert_equal("hello world", @test_output, @message)
     end
 
 end

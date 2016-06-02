@@ -31,4 +31,3 @@ class HelpBiggerHelloWorld
 end
 
 program = HelpBiggerHelloWorld.new
-program.run
